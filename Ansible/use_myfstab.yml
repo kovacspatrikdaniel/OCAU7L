@@ -1,0 +1,5 @@
+---
+- name: My fstab role playbook
+  hosts: workstation
+  roles:
+    - myfstab

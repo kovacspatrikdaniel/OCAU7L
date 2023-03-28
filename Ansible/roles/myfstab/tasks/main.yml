@@ -1,0 +1,12 @@
+---
+# tasks file for myfstab
+- name: Create directory
+  file:
+    path: "{{ dir_name }}"
+    state: directory
+ 
+
+- name: Set up fstab
+  lineinfile:
+    path: /etc/fstab
+    line: UUID="{{ uuid }}" "{{ mount_path }}" "{{ type }}" defaults 0 0 

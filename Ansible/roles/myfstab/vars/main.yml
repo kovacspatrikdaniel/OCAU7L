@@ -1,0 +1,7 @@
+---
+# vars file for myfstab
+
+dir_name: /data/speci/dir
+uuid: 5e75a2b9-1367-4cc8-bb38-4d6abc3964b8
+mount_path: /data/speci/dir
+type: ext4

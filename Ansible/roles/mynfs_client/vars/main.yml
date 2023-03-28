@@ -1,0 +1,5 @@
+---
+# vars file for mynfs_client
+nfs_share_dir: /data/comp
+
+

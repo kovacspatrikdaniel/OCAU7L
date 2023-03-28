@@ -1,0 +1,11 @@
+---
+# tasks file for myselinux
+- name: Create directory
+  file:
+    path: "{{ dir_name }}"
+    state: directory
+
+- name: Selinux type set to samba_share_t
+  ansible.builtin.file:
+    path: "{{ path_to_file }}"
+    setype: "{{ se_type }}" 

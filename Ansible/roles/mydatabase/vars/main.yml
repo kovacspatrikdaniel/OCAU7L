@@ -1,0 +1,7 @@
+---
+# vars file for mydatabase
+
+db_name: tesztdb
+dir_name: /usr/local/db
+packages: mariadb-server,python3-PyMySQL
+service_name: mariadb

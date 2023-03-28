@@ -1,0 +1,5 @@
+---
+- name: mounting nfs share on client
+  hosts: 172.25.250.10
+  roles:
+    - mynfs_client

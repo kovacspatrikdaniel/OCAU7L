@@ -1,0 +1,5 @@
+---
+# vars file for myselinux
+dir_name: /samba
+path_to_file: /samba
+se_type: samba_share_t

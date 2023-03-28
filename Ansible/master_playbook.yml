@@ -1,0 +1,11 @@
+---
+- name: MySQL
+  import_playbook: use_mydatabase.yml
+- name: Fstab
+  import_playbook: use_myfstab.yml
+- name: Selinux
+  import_playbook: use_myselinux.yml
+- name: NFS server
+  import_playbook: use_mynfs.yml
+- name: NFS client
+  import_playbook: use_mynfs_client.yml

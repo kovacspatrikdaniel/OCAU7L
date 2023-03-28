@@ -1,0 +1,10 @@
+---
+# tasks file for mynfs_client
+- name: nfs mount on client
+  shell: |
+    mount -t nfs 172.25.250.9:/data/comp /data/comp
+  #ansible.posix.mount:
+   # fstype: nfs
+    #src: "172.25.250.9:{{ nfs_share_dir }}"
+    #path: "{{ nfs_share_dir }}"
+    #state: mounted

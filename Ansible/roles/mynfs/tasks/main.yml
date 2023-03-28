@@ -1,0 +1,32 @@
+---
+- name: Install nfs server packages
+  dnf:
+    name: nfs-utils
+    state: present
+
+- name: Create nfs share directory
+  file:
+    path: "{{ nfs_share_dir }}"
+    state: directory
+    mode: '0755'
+    
+- name: Configure nfs exports
+  lineinfile:
+    path: /etc/exports
+    line: "{{ nfs_share_dir }} {{ nfs_client_subnet }}(rw,sync)"
+    state: present
+    create: true
+    
+- name: Restart nfs server
+  service:
+    name: nfs-server
+    state: restarted
+    
+- name: Add nfs share to /etc/fstab
+  lineinfile:
+    path: /etc/fstab
+    line: "172.25.250.9:{{ nfs_share_dir }} {{ nfs_share_dir }} nfs defaults 0 0"
+    state: present
+    create: true
+
+

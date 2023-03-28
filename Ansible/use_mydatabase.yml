@@ -1,0 +1,5 @@
+---
+- name: mydatabase role playbook
+  hosts: workstation
+  roles:
+    - mydatabase

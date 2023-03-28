@@ -1,0 +1,5 @@
+---
+- name: My selinux role playbook
+  hosts: workstation
+  roles:
+    - myselinux

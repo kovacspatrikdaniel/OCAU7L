@@ -1,0 +1,22 @@
+---
+# tasks file for mydatabase
+- name: Create directory
+  file:
+    path: "{{ dir_name }}"
+    state: directory
+
+- name: Install Mariadb
+  ansible.builtin.dnf:
+    name: "{{ packages }}"
+    state: present
+
+      
+- name: Edit mariadb conf file
+  lineinfile:
+    path: /etc/my.cnf
+    regexp: '^datadir='
+    line: 'datadir=/usr/local/db'
+  notify:
+    - restart mariadb
+
+     

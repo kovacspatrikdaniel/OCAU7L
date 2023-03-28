@@ -1,0 +1,4 @@
+---
+# vars file for mynfs
+nfs_client_subnet: 172.25.250.10
+nfs_share_dir: /data/comp
